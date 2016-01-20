@@ -10,4 +10,9 @@ import junit.framework.Assert;
  */
 public class ExampleTest extends InstrumentationTestCase {
 
+    public void testAdd(){
+        int a=2;
+        int b=3;
+        Assert.assertEquals(a,b);
+    }
 }
