@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.ry.dialry">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".demo01.Demo01Activity" />
+        <activity android:name=".demo01.okhttp.OKHttpActivity" />
+        <activity android:name=".demo01.recycleview.HomeActivity" />
+        <activity android:name=".demo01.recycleview.StaggeredGridLayoutActivity" />
+        <activity android:name=".demo01.recycleview.FilterActivity" />
+        <activity android:name=".demo01.bgarefresh.analyzerecyclerviewwithbgarefreshlayout.DefineLoadActivity" />
+        <activity android:name=".demo01.bgarefresh.analyzerecyclerviewwithbgarefreshlayout.DefineOtherStylesActivity" />
+        <activity android:name=".demo01.bgarefresh.analyzerecyclerviewwithbgarefreshlayout.DefineSlidingDeleteActivity" />
+        <activity android:name=".demo01.bgarefresh.analyzerecyclerviewwithbgarefreshlayout.DefineLoadWithRefreshActivity" />
+        <activity android:name=".demo01.bgarefresh.analyzerecyclerviewwithbgarefreshlayout.MainActivity" />
+        <activity android:name=".demo01.bgarefresh.analyzerecyclerviewwithbgarefreshlayout.DefineRefreshActivity" />
+        <activity android:name=".demo01.ndk.NDKActivity"/>
+    </application>
+
+</manifest>

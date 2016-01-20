@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/okhttp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"
+        android:text="okhttp"/>
+
+    <Button
+        android:id="@+id/recycleview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"
+        android:text="recycleview"/>
+    <Button
+        android:id="@+id/analyzerecyclerviewwithbgarefreshlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"
+        android:text="analyzerecyclerviewwithbgarefreshlayout"/>
+
+    <Button
+        android:id="@+id/ndkbegin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"
+        android:text="ndkbegin"/>
+</LinearLayout>
