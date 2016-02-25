@@ -1,0 +1,24 @@
+<resources>
+    <style name="custom_window_title_background">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="custom_title" parent="@android:style/Theme.Light">
+        <item name="android:windowTitleSize">45dip</item>
+        <item name="android:windowTitleBackgroundStyle">@style/custom_window_title_background</item>
+    </style>
+
+    <style name="Custom_Dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="Custom_Dialog_Dim" parent="Custom_Dialog">
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+</resources>

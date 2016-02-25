@@ -10,6 +10,9 @@ import cn.ry.dialry.R;
 import cn.ry.dialry.demo01.bgarefresh.analyzerecyclerviewwithbgarefreshlayout.MainActivity;
 import cn.ry.dialry.demo01.ndk.NDKActivity;
 import cn.ry.dialry.demo01.okhttp.OKHttpActivity;
+import cn.ry.dialry.demo01.percent.PercentFrameLayoutActivity;
+import cn.ry.dialry.demo01.percent.PercentLinearLayoutActivity;
+import cn.ry.dialry.demo01.percent.PercentRelayouLayoutActivity;
 import cn.ry.dialry.demo01.recycleview.HomeActivity;
 
 /**
@@ -36,6 +39,15 @@ public class Demo01Activity extends AppCompatActivity {
                 break;
             case R.id.ndkbegin:
                 startActivity(new Intent(this, NDKActivity.class));
+                break;
+            case R.id.percentFrameLayout:
+                startActivity(new Intent(this, PercentFrameLayoutActivity.class));
+                break;
+            case R.id.percentRelativeLayout:
+                startActivity(new Intent(this, PercentRelayouLayoutActivity.class));
+                break;
+            case R.id.percentLinearLayout:
+                startActivity(new Intent(this, PercentLinearLayoutActivity.class));
                 break;
         }
     }

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">IKantechSupport</string>
+    <string name="action_settings">Settings</string>
+    <string name="str_loading">正在加载&#8230;</string>
+    <string name="str_back">Back</string>
+    <string name="str_title">Title</string>
+    <string name="str_ok">Ok</string>
+</resources>

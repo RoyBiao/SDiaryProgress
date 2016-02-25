@@ -32,6 +32,9 @@
         <activity android:name=".demo01.bgarefresh.analyzerecyclerviewwithbgarefreshlayout.MainActivity" />
         <activity android:name=".demo01.bgarefresh.analyzerecyclerviewwithbgarefreshlayout.DefineRefreshActivity" />
         <activity android:name=".demo01.ndk.NDKActivity"/>
+        <activity android:name=".demo01.percent.PercentFrameLayoutActivity"/>
+        <activity android:name=".demo01.percent.PercentRelayouLayoutActivity"/>
+        <activity android:name=".demo01.percent.PercentLinearLayoutActivity"/>
     </application>
 
 </manifest>

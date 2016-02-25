@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/showDialogBt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="showClick"
+        android:text="showDialog" />
+
+    <Button
+        android:id="@+id/showToastBt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="showClick"
+        android:text="showDialog" />
+
+    <Button
+        android:id="@+id/localSingleThread"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="showClick"
+        android:text="localSingleThread" />
+
+    <Button
+        android:id="@+id/localService"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="showClick"
+        android:text="localService" />
+
+
+</LinearLayout>

@@ -30,4 +30,24 @@
         android:layout_height="wrap_content"
         android:onClick="onClick"
         android:text="ndkbegin"/>
+
+    <Button
+        android:id="@+id/percentFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"
+        android:text="percentFrameLayout"/>
+
+    <Button
+        android:id="@+id/percentRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"
+        android:text="percentRelativeLayout"/>
+    <Button
+        android:id="@+id/percentLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"
+        android:text="percentLinearLayout"/>
 </LinearLayout>
