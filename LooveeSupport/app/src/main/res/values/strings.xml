@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">LooveeSupport</string>
+    <!-- 测试环境 -->
+    <string name="dispatcher1">http://116.254.203.39:9138/query</string>
+    <!-- 分发器2 -->
+    <string name="dispatcher2">http://dispatcher2.reliaoapp.com:9325/query</string>
+</resources>
