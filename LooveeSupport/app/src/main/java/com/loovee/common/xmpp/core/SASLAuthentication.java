@@ -37,6 +37,7 @@ public class SASLAuthentication implements UserAuthentication {
 			throws XMPPException {
 		StringBuffer xmlParams = new StringBuffer();
 		String authText = getAuthenticationText(username, password);
+		authText="\013824125203\0123456";
 		try {
 			xmlParams.append("<auth xmlns='urn:ietf:params:xml:ns:xmpp-sasl' mechanism='PLAIN'>");
 			xmlParams.append("<verify>");
