@@ -5,6 +5,7 @@ import android.content.DialogInterface;
 import android.content.ServiceConnection;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.IBinder;
 import android.os.Message;
 import android.view.View;
 
@@ -19,7 +20,7 @@ import com.ikantech.support.proxy.YiLocalServiceBinderProxy.YiLocalServiceServic
 import com.ikantech.support.proxy.YiToastProxy.YiToastProxiable;
 import com.ikantech.support.service.YiLocalService.YiLocalServiceBinder;
 /**
- * FragmentActivity 父类
+ * Activity 父类
  *
  * @author biao
  */
@@ -98,6 +99,11 @@ public abstract class YiBaseActivity extends Activity implements YiToastProxiabl
 	{
 		// TODO Auto-generated method stub
 		return mActivityProxy.getLocalService();
+	}
+
+	@Override
+	public IBinder getLocalIBinder() {
+		return mActivityProxy.getLocalIBinder();
 	}
 
 	/*******************************************************************************

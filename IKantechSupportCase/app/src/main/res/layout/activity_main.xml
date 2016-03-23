@@ -34,5 +34,40 @@
         android:onClick="showClick"
         android:text="localService" />
 
+    <Button
+        android:id="@+id/AsyExecute"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="showClick"
+        android:text="AsyExecute" />
+
+    <Button
+        android:id="@+id/AsyCancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="showClick"
+        android:text="AsyCancel" />
+
+    <Button
+        android:id="@+id/OkHttpGet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="showClick"
+        android:text="OkHttpGet" />
+
+    <Button
+        android:id="@+id/OkHttpCancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="showClick"
+        android:text="OkHttpCancel" />
+
+    <Button
+        android:id="@+id/fresco"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="showClick"
+        android:text="fresco" />
+
 
 </LinearLayout>

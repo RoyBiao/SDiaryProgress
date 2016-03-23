@@ -4,6 +4,7 @@ import android.content.ServiceConnection;
 import android.content.DialogInterface.OnCancelListener;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.IBinder;
 import android.support.v4.app.Fragment;
 import android.view.View;
 
@@ -108,6 +109,11 @@ public abstract class YiBaseFragment extends Fragment implements
 	{
 		// TODO Auto-generated method stub
 		return mActivityProxy.getLocalService();
+	}
+
+	@Override
+	public IBinder getLocalIBinder() {
+		return mActivityProxy.getLocalIBinder();
 	}
 
 	/*******************************************************************************

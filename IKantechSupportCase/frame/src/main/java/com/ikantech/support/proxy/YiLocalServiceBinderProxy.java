@@ -1,5 +1,6 @@
 package com.ikantech.support.proxy;
 
+import android.app.Service;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
@@ -13,91 +14,87 @@ import com.ikantech.support.util.YiLog;
 
 /**
  * LocalService绑定代理类。 便于绑定LocalService，减少冗余代码
- * 
+ *
  * @author biao
- * 
  */
-public class YiLocalServiceBinderProxy
-{
-	private static String action = "com.cases.ikantech.service.CsService";
-	private YiLocalServiceBinder mService = null;
-	private Context mContext = null;
-	private ServiceConnection mExConnection = null;
-	public static void setServiceAction(String service){
-		action=service;
-	}
+public class YiLocalServiceBinderProxy {
+    private static String action = "com.cases.ikantech.service.CsService";
+    private YiLocalServiceBinder mService = null;
+    private IBinder mBinder = null;
+    private Context mContext = null;
+    private ServiceConnection mExConnection = null;
 
-	private ServiceConnection mConnection = new ServiceConnection()
-	{
+    public static void setServiceAction(String service) {
+        action = service;
+    }
 
-		public void onServiceConnected(ComponentName name, IBinder service)
-		{
-			mService = (YiLocalServiceBinder) service;
-			if (mExConnection != null)
-			{
-				mExConnection.onServiceConnected(name, service);
-			}
-			YiLog.getInstance().i("Bind Success:" + mService);
-		}
+    private ServiceConnection mConnection = new ServiceConnection() {
 
-		public void onServiceDisconnected(ComponentName name)
-		{
-			// TODO Auto-generated method stub
-			mService = null;
-			if (mExConnection != null)
-			{
-				mExConnection.onServiceDisconnected(name);
-			}
-		}
-	};
+        public void onServiceConnected(ComponentName name, IBinder service) {
+            mBinder = service;
+            mService = (YiLocalServiceBinder) service;
+            if (mExConnection != null) {
+                mExConnection.onServiceConnected(name, service);
+            }
+            YiLog.getInstance().i("Bind Success:" + mService);
+        }
 
-	public YiLocalServiceBinderProxy(Context context)
-	{
-		if (context == null)
-		{
-			throw new NullPointerException("context non-null");
-		}
-		mContext = context;
-	}
+        public void onServiceDisconnected(ComponentName name) {
+            // TODO Auto-generated method stub
+            mService = null;
+            if (mExConnection != null) {
+                mExConnection.onServiceDisconnected(name);
+            }
+        }
+    };
 
-	public void installLocalServiceBinder()
-	{
-		if (TextUtils.isEmpty(action))
-		{
-			throw new NullPointerException("please set service action in application");
-		}
-		Intent service = new Intent(action);
-		mContext.bindService(service, mConnection, Context.BIND_AUTO_CREATE);
-	}
+    public YiLocalServiceBinderProxy(Context context) {
+        if (context == null) {
+            throw new NullPointerException("context non-null");
+        }
+        mContext = context;
+    }
 
-	public void installLocalServiceBinder(ServiceConnection connection)
-	{
-		mExConnection = connection;
-		installLocalServiceBinder();
-	}
+    public void installLocalServiceBinder() {
+        if (TextUtils.isEmpty(action)) {
+            throw new NullPointerException("please set service action in application");
+        }
+        Intent service = new Intent(action);
+        mContext.bindService(service, mConnection, Context.BIND_AUTO_CREATE);
+    }
 
-	public void uninstallLocalServiceBinder()
-	{
-		mContext.unbindService(mConnection);
-	}
+    public void installLocalServiceBinder(ServiceConnection connection) {
+        mExConnection = connection;
+        installLocalServiceBinder();
+    }
 
-	public YiLocalServiceBinder getLocalService()
-	{
-		if (mService == null)
-		{
-			throw new NullPointerException("mService is null");
-		}
-		return mService;
-	}
+    public void uninstallLocalServiceBinder() {
+        mContext.unbindService(mConnection);
+    }
 
-	public interface YiLocalServiceServiceBinderProxiable
-	{
-		void installLocalServiceBinder();
+    public YiLocalServiceBinder getLocalService() {
+        if (mService == null) {
+            throw new NullPointerException("mService is null");
+        }
+        return mService;
+    }
 
-		void installLocalServiceBinder(ServiceConnection connection);
+    public IBinder getLocalIBinder() {
+        if (mBinder == null) {
+            throw new NullPointerException("mBinder is null");
+        }
+        return mBinder;
+    }
 
-		void uninstallLocalServiceBinder();
+    public interface YiLocalServiceServiceBinderProxiable {
+        void installLocalServiceBinder();
 
-		YiLocalServiceBinder getLocalService();
-	}
+        void installLocalServiceBinder(ServiceConnection connection);
+
+        void uninstallLocalServiceBinder();
+
+        YiLocalServiceBinder getLocalService();
+
+        IBinder getLocalIBinder();
+    }
 }

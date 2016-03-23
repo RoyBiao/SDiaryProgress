@@ -4,6 +4,7 @@ import java.io.File;
 
 import android.content.Context;
 import android.os.Environment;
+import android.text.TextUtils;
 
 public class YiFileUtils {
     public static final String FILE_SUFFIX = ".ik";
@@ -29,7 +30,10 @@ public class YiFileUtils {
             String path;
             if (Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState()) ||
                     !Environment.isExternalStorageRemovable()) {
-                path = mContext.getExternalCacheDir().getPath();
+                if(mContext.getExternalCacheDir()!=null)
+                    path = mContext.getExternalCacheDir().getPath();
+                else
+                    path = mContext.getCacheDir().getPath();
             } else {
                 path = mContext.getCacheDir().getPath();
             }

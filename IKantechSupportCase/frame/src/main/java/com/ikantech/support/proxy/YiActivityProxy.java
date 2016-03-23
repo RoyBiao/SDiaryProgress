@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.DialogInterface.OnCancelListener;
 import android.content.ServiceConnection;
 import android.os.Handler;
+import android.os.IBinder;
 import android.text.TextUtils;
 import android.view.View;
 
@@ -109,6 +110,12 @@ public class YiActivityProxy
 	{
 		// TODO Auto-generated method stub
 		return mLocalServiceBinderProxy.getLocalService();
+	}
+
+	public IBinder getLocalIBinder()
+	{
+		// TODO Auto-generated method stub
+		return mLocalServiceBinderProxy.getLocalIBinder();
 	}
 
 	/*******************************************************************************
