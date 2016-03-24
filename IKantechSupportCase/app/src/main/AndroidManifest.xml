@@ -23,6 +23,7 @@
         </activity>
         <activity android:name=".ui.OtherActivity"></activity>
         <activity android:name=".ui.FrescoActivity"/>
+        <activity android:name=".ui.OkHttpActivity"/>
         <service android:name=".service.CsService">
             <intent-filter>
                 <action android:name="com.cases.ikantech.service.CsService"></action>

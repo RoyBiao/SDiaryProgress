@@ -8,6 +8,7 @@ import android.view.View;
 import com.cases.ikantech.base.CustomTitleActivity;
 import com.cases.ikantech.service.CsService;
 import com.cases.ikantech.ui.FrescoActivity;
+import com.cases.ikantech.ui.OkHttpActivity;
 import com.cases.ikantech.ui.OtherActivity;
 import com.ikantech.support.task.YiRunnable;
 import com.ikantech.support.task.YiTask;
@@ -155,6 +156,11 @@ public class MainActivity extends CustomTitleActivity {
                 break;
             case R.id.fresco:
                 startActivity(new Intent(MainActivity.this, FrescoActivity.class));
+                break;
+
+            case R.id.okhttp:
+                startActivity(new Intent(MainActivity.this, OkHttpActivity.class));
+
                 break;
         }
     }
