@@ -9,45 +9,62 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="onClick"
-        android:text="okhttp"/>
+        android:text="okhttp" />
 
     <Button
         android:id="@+id/recycleview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="onClick"
-        android:text="recycleview"/>
+        android:text="recycleview" />
+
     <Button
         android:id="@+id/analyzerecyclerviewwithbgarefreshlayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="onClick"
-        android:text="analyzerecyclerviewwithbgarefreshlayout"/>
+        android:text="analyzerecyclerviewwithbgarefreshlayout" />
 
     <Button
         android:id="@+id/ndkbegin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="onClick"
-        android:text="ndkbegin"/>
+        android:text="ndkbegin" />
 
     <Button
         android:id="@+id/percentFrameLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="onClick"
-        android:text="percentFrameLayout"/>
+        android:text="percentFrameLayout" />
 
     <Button
         android:id="@+id/percentRelativeLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="onClick"
-        android:text="percentRelativeLayout"/>
+        android:text="percentRelativeLayout" />
+
     <Button
         android:id="@+id/percentLinearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="onClick"
-        android:text="percentLinearLayout"/>
+        android:text="percentLinearLayout" />
+
+
+    <Button
+        android:id="@+id/cityDialogFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"
+        android:text="cityDialogFragment" />
+
+    <Button
+        android:id="@+id/canvas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"
+        android:text="canvas" />
 </LinearLayout>
