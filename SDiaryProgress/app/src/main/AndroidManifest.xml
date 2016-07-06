@@ -44,6 +44,7 @@
         <activity android:name=".demo01.percent.PercentRelayouLayoutActivity"/>
         <activity android:name=".demo01.percent.PercentLinearLayoutActivity"/>
         <activity android:name=".demo01.canvas.CanvasActivity"/>
+        <activity android:name=".demo01.surface.SurfaceViewActivity"/>
     </application>
 
 </manifest>

@@ -18,8 +18,8 @@ public class MyView extends View {
     Paint textPaint;
     Paint linePaint;
 
-    int screenWidth;
-    int screenHeight;
+    int viewWidth;
+    int viewHeight;
 
     Point point;
     String desc;
@@ -38,10 +38,9 @@ public class MyView extends View {
         this.context = context;
     }
 
-    public void loadData(Point point, String desc, String brand, String price) {
-        isInvalidate = true;
-        screenWidth = YiDeviceUtils.getDisplayMetrics(context).widthPixels;
-        screenHeight = YiDeviceUtils.getDisplayMetrics(context).heightPixels;
+    public void loadData(int viewWidth, int viewHeight, Point point, String desc, String brand, String price) {
+        this.viewWidth = viewWidth;
+        this.viewHeight = viewHeight;
         this.point = point;
         this.desc = desc;
         this.brand = brand;
@@ -54,25 +53,28 @@ public class MyView extends View {
         textPaint = new Paint(); //设置一个笔刷大小是3的黄色的画笔
         textPaint.setColor(Color.WHITE);
         textPaint.setTextSize(20);
+        isInvalidate = true;
         invalidate();
     }
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+        System.out.println("onMeasure");
     }
 
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
+        System.out.println("onDraw");
         if (isInvalidate) {
             int x = point.x; //50
             int y = point.y; //100
-            if (screenWidth - x < 200) {
-                x = screenWidth - 200;
+            if (viewWidth - x < 200) {
+                x = viewWidth - 200;
             }
-            if (screenHeight - y < 100) {
-                y = screenHeight - 100;
+            if (viewHeight - y < 100) {
+                y = viewHeight - 100;
             }
 
             canvas.drawText(desc, x + 60, y - 55, textPaint);

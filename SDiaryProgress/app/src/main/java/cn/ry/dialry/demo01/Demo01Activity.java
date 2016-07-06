@@ -17,6 +17,7 @@ import cn.ry.dialry.demo01.percent.PercentFrameLayoutActivity;
 import cn.ry.dialry.demo01.percent.PercentLinearLayoutActivity;
 import cn.ry.dialry.demo01.percent.PercentRelayouLayoutActivity;
 import cn.ry.dialry.demo01.recycleview.HomeActivity;
+import cn.ry.dialry.demo01.surface.SurfaceViewActivity;
 
 /**
  * Created by ruibiao on 15-12-23.
@@ -31,28 +32,28 @@ public class Demo01Activity extends AppCompatActivity {
 
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.okhttp:
+            case R.id.okhttp://
                 startActivity(new Intent(Demo01Activity.this, OKHttpActivity.class));
                 break;
-            case R.id.recycleview:
+            case R.id.recycleview://
                 startActivity(new Intent(Demo01Activity.this, HomeActivity.class));
                 break;
-            case R.id.analyzerecyclerviewwithbgarefreshlayout:
+            case R.id.analyzerecyclerviewwithbgarefreshlayout://
                 startActivity(new Intent(this, MainActivity.class));
                 break;
-            case R.id.ndkbegin:
+            case R.id.ndkbegin://
                 startActivity(new Intent(this, NDKActivity.class));
                 break;
-            case R.id.percentFrameLayout:
+            case R.id.percentFrameLayout://
                 startActivity(new Intent(this, PercentFrameLayoutActivity.class));
                 break;
-            case R.id.percentRelativeLayout:
+            case R.id.percentRelativeLayout://
                 startActivity(new Intent(this, PercentRelayouLayoutActivity.class));
                 break;
-            case R.id.percentLinearLayout:
+            case R.id.percentLinearLayout://
                 startActivity(new Intent(this, PercentLinearLayoutActivity.class));
                 break;
-            case R.id.cityDialogFragment:
+            case R.id.cityDialogFragment://
                 /**
                  * 为了不重复显示dialog，在显示对话框之前移除正在显示的对话框。
                  */
@@ -75,6 +76,10 @@ public class Demo01Activity extends AppCompatActivity {
 
             case R.id.canvas:
                 startActivity(new Intent(this, CanvasActivity.class));
+                break;
+
+            case R.id.surfaceView:
+                startActivity(new Intent(this, SurfaceViewActivity.class));
                 break;
         }
     }
