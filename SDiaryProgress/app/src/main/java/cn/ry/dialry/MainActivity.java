@@ -11,6 +11,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import cn.ry.dialry.demo01.Demo01Activity;
+import cn.ry.dialry.demo02.Demo02Activity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -59,6 +60,9 @@ public class MainActivity extends AppCompatActivity {
         switch (v.getId()) {
             case R.id.demo01:
                 startActivity(new Intent(MainActivity.this, Demo01Activity.class));
+                break;
+            case R.id.demo02:
+                startActivity(new Intent(MainActivity.this, Demo02Activity.class));
                 break;
         }
     }

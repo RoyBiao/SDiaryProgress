@@ -1,64 +1,69 @@
 package cn.ry.dialry.demo01.surface;
 
-
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.SurfaceTexture;
 import android.util.AttributeSet;
 import android.view.SurfaceHolder;
-import android.view.SurfaceHolder.Callback;
-import android.view.SurfaceView;
+import android.view.TextureView;
 import android.widget.LinearLayout;
 
 import cn.ry.dialry.R;
 import cn.ry.dialry.util.YiDeviceUtils;
 import cn.ry.dialry.util.YiLog;
 
-public class DemoSurfaceView extends SurfaceView implements Callback {
+/**
+ * Created by ruibiao on 16-7-9.
+ */
+public class DemoextureView extends TextureView implements TextureView.SurfaceTextureListener {
     int[] mFrameRes = new int[]{R.mipmap.mg1ani0001, R.mipmap.mg1ani0002, R.mipmap.mg1ani0003, R.mipmap.mg1ani0004, R.mipmap.mg1ani0005, R.mipmap.mg1ani0006, R.mipmap.mg1ani0007, R.mipmap.mg1ani0008, R.mipmap.mg1ani0009, R.mipmap.mg1ani0010, R.mipmap.mg1ani0011, R.mipmap.mg1ani0012, R.mipmap.mg4ani0001, R.mipmap.mg4ani0002, R.mipmap.mg4ani0003, R.mipmap.mg4ani0004, R.mipmap.mg4ani0005, R.mipmap.mg4ani0006, R.mipmap.mg4ani0007, R.mipmap.mg4ani0008, R.mipmap.mg4ani0009, R.mipmap.mg4ani0010, R.mipmap.mg4ani0011, R.mipmap.mg4ani0012};
     LinearLayout.LayoutParams layoutParams = null;
     LoopThread2 thread;
     int i = 0;
 
-    public DemoSurfaceView(Context context, AttributeSet attrs) {
-        super(context, attrs);
-        //init(); //初始化,设置生命周期回调方法
+    public DemoextureView(Context context) {
+        super(context);
     }
 
-    public DemoSurfaceView(Context context) {
-        super(context);
-        //init(); //初始化,设置生命周期回调方法
+    public DemoextureView(Context context, AttributeSet attrs) {
+        super(context, attrs);
     }
 
     public void init() {
-
-        SurfaceHolder holder = getHolder();
-        holder.addCallback(this); //设置Surface生命周期回调
-        thread = new LoopThread2(holder, getContext());
+//        SurfaceHolder holder = getHolder();
+//        holder.addCallback(this); //设置Surface生命周期回调
+        thread = new LoopThread2(null, getContext());
     }
 
     @Override
-    public void surfaceChanged(SurfaceHolder holder, int format, int width,
-                               int height) {
-    }
-
-    @Override
-    public void surfaceCreated(SurfaceHolder holder) {
+    public void onSurfaceTextureAvailable(SurfaceTexture surface, int width, int height) {
         thread.isRunning = true;
         thread.start();
     }
 
     @Override
-    public void surfaceDestroyed(SurfaceHolder holder) {
+    public void onSurfaceTextureSizeChanged(SurfaceTexture surface, int width, int height) {
+
+    }
+
+    @Override
+    public boolean onSurfaceTextureDestroyed(SurfaceTexture surface) {
         thread.isRunning = false;
         try {
             thread.join();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+        return true;
+    }
+
+    @Override
+    public void onSurfaceTextureUpdated(SurfaceTexture surface) {
+
     }
 
     /**
@@ -197,5 +202,4 @@ public class DemoSurfaceView extends SurfaceView implements Callback {
             i++;
         }
     }
-
 }

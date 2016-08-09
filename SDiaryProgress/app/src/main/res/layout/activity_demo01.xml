@@ -1,77 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/okhttp"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="onClick"
-        android:text="okhttp" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/recycleview"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="onClick"
-        android:text="recycleview" />
+        <Button
+            android:id="@+id/okhttp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="okhttp" />
 
-    <Button
-        android:id="@+id/analyzerecyclerviewwithbgarefreshlayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="onClick"
-        android:text="analyzerecyclerviewwithbgarefreshlayout" />
+        <Button
+            android:id="@+id/recycleview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="recycleview" />
 
-    <Button
-        android:id="@+id/ndkbegin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="onClick"
-        android:text="ndkbegin" />
+        <Button
+            android:id="@+id/analyzerecyclerviewwithbgarefreshlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="analyzerecyclerviewwithbgarefreshlayout" />
 
-    <Button
-        android:id="@+id/percentFrameLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="onClick"
-        android:text="percentFrameLayout" />
+        <Button
+            android:id="@+id/ndkbegin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="ndkbegin" />
 
-    <Button
-        android:id="@+id/percentRelativeLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="onClick"
-        android:text="percentRelativeLayout" />
+        <Button
+            android:id="@+id/percentFrameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="percentFrameLayout" />
 
-    <Button
-        android:id="@+id/percentLinearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="onClick"
-        android:text="percentLinearLayout" />
+        <Button
+            android:id="@+id/percentRelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="percentRelativeLayout" />
+
+        <Button
+            android:id="@+id/percentLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="percentLinearLayout" />
 
 
-    <Button
-        android:id="@+id/cityDialogFragment"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="onClick"
-        android:text="cityDialogFragment" />
+        <Button
+            android:id="@+id/cityDialogFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="cityDialogFragment" />
 
-    <Button
-        android:id="@+id/canvas"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="onClick"
-        android:text="canvas" />
+        <Button
+            android:id="@+id/canvas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="canvas" />
 
-    <Button
-        android:id="@+id/surfaceView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="onClick"
-        android:text="surfaceView" />
-</LinearLayout>
+        <Button
+            android:id="@+id/surfaceView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="surfaceView" />
+
+        <Button
+            android:id="@+id/sqliteasset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="sqliteasset" />
+    </LinearLayout>
+</ScrollView>
+

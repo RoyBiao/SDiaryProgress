@@ -45,6 +45,12 @@
         <activity android:name=".demo01.percent.PercentLinearLayoutActivity"/>
         <activity android:name=".demo01.canvas.CanvasActivity"/>
         <activity android:name=".demo01.surface.SurfaceViewActivity"/>
+        <activity android:name=".demo01.sqliteasset.demo.MainActivity"/>
+        <activity android:name=".demo02.Demo02Activity"/>
+        <activity android:name=".demo02.actionbar.ActionBarTestActivity"/>
+        <activity android:name=".demo02.actionbar.ActionBarHomeActivity"/>
+        <activity android:name=".demo02.actionbar.ActionBarViewActivity"/>
+        <activity android:name=".demo02.actionbar.ActionBarTabActivity"/>
     </application>
 
 </manifest>

@@ -81,6 +81,10 @@ public class Demo01Activity extends AppCompatActivity {
             case R.id.surfaceView:
                 startActivity(new Intent(this, SurfaceViewActivity.class));
                 break;
+
+            case R.id.sqliteasset:
+                startActivity(new Intent(this, cn.ry.dialry.demo01.sqliteasset.demo.MainActivity.class));
+                break;
         }
     }
 }
