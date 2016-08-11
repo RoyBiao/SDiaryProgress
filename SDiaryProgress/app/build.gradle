@@ -35,4 +35,5 @@ dependencies {
     compile 'cn.bingoogolapple:bga-refreshlayout:1.1.2'
     compile 'com.android.support:percent:22.2.0'
     compile 'com.google.code.gson:gson:2.6.2'
+    compile 'com.readystatesoftware.systembartint:systembartint:1.0.4'
 }

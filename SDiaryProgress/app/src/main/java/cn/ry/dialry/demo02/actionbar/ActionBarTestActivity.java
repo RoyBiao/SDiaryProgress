@@ -49,7 +49,8 @@ public class ActionBarTestActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main, menu);
+        getMenuInflater().inflate(R.menu.action_bar03, menu);
+        menu.getItem(0).setIcon(R.mipmap.ic_menu_delete);
         return true;
     }
 }

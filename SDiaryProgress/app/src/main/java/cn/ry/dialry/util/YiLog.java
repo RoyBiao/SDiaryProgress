@@ -22,7 +22,7 @@ public class YiLog {
 
     public static YiLog getInstance() {
         if (instance == null) {
-            instance = new YiLog("YiLog");
+            instance = new YiLog("DDLog");
         }
         return instance;
     }
@@ -34,7 +34,7 @@ public class YiLog {
         this.tag = tag;
     }
 
-    private String tag = "YiLog";
+    private String tag = "DDLog";
 
     /**
      * A little trick to reuse a formatter in the same thread

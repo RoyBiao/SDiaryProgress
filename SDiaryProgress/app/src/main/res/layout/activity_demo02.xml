@@ -8,4 +8,11 @@
         android:layout_height="wrap_content"
         android:onClick="onClick"
         android:text="actionBar" />
+
+    <Button
+        android:id="@+id/SystenBarTint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"
+        android:text="SystenBarTint" />
 </LinearLayout>

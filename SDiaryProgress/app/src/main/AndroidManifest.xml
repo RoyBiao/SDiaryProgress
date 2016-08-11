@@ -4,14 +4,15 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <!-- 在SDCard中创建与删除文件权限 -->
-    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
     <!-- 往SDCard写入数据权限 -->
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <!-- 申请使用摄像头的权限 -->
-    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -39,18 +40,27 @@
         <activity android:name=".demo01.bgarefresh.analyzerecyclerviewwithbgarefreshlayout.DefineLoadWithRefreshActivity" />
         <activity android:name=".demo01.bgarefresh.analyzerecyclerviewwithbgarefreshlayout.MainActivity" />
         <activity android:name=".demo01.bgarefresh.analyzerecyclerviewwithbgarefreshlayout.DefineRefreshActivity" />
-        <activity android:name=".demo01.ndk.NDKActivity"/>
-        <activity android:name=".demo01.percent.PercentFrameLayoutActivity"/>
-        <activity android:name=".demo01.percent.PercentRelayouLayoutActivity"/>
-        <activity android:name=".demo01.percent.PercentLinearLayoutActivity"/>
-        <activity android:name=".demo01.canvas.CanvasActivity"/>
-        <activity android:name=".demo01.surface.SurfaceViewActivity"/>
-        <activity android:name=".demo01.sqliteasset.demo.MainActivity"/>
-        <activity android:name=".demo02.Demo02Activity"/>
-        <activity android:name=".demo02.actionbar.ActionBarTestActivity"/>
-        <activity android:name=".demo02.actionbar.ActionBarHomeActivity"/>
-        <activity android:name=".demo02.actionbar.ActionBarViewActivity"/>
-        <activity android:name=".demo02.actionbar.ActionBarTabActivity"/>
+        <activity android:name=".demo01.ndk.NDKActivity" />
+        <activity android:name=".demo01.percent.PercentFrameLayoutActivity" />
+        <activity android:name=".demo01.percent.PercentRelayouLayoutActivity" />
+        <activity android:name=".demo01.percent.PercentLinearLayoutActivity" />
+        <activity android:name=".demo01.canvas.CanvasActivity" />
+        <activity android:name=".demo01.surface.SurfaceViewActivity" />
+        <activity android:name=".demo01.sqliteasset.demo.MainActivity" />
+        <activity android:name=".demo02.Demo02Activity" />
+        <activity android:name=".demo02.actionbar.ActionBarTestActivity" />
+        <activity android:name=".demo02.actionbar.ActionBarHomeActivity" />
+        <activity android:name=".demo02.actionbar.ActionBarViewActivity" />
+        <activity android:name=".demo02.actionbar.ActionBarTabActivity" />
+        <activity android:name=".demo02.systembartint.SystenBarTintActivity" />
+        <activity android:name=".demo02.systembartint.DefaultActivity"
+            android:theme="@style/FullBleedTheme" />
+        <activity android:name=".demo02.systembartint.ColorActivity"
+            android:theme="@style/FullBleedTheme" />
+        <activity android:name=".demo02.systembartint.MatchActionBarActivity"
+            android:theme="@style/ActionBarTheme"/>
+        <activity android:name=".demo02.systembartint.SamplesListActivity" />
+
     </application>
 
 </manifest>
